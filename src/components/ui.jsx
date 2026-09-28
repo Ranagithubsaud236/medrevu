@@ -64,7 +64,7 @@ export function Photo({ src = photos.doc3, blob = true, className = '', alt = 'H
         <div className="absolute inset-[5%] animate-blob overflow-hidden bg-white shadow-2xl ring-4 ring-white [animation-delay:-3s]"><img src={src} alt={alt} className="h-full w-full animate-zoom object-cover object-top" /></div>
       </> : <>
         {blob && <div className="absolute inset-x-[8%] bottom-[6%] top-[8%] animate-blob bg-gold" />}
-        <img src={src} alt={alt} className="relative h-full w-full object-contain object-bottom drop-shadow-[0_18px_30px_rgba(11,29,54,.25)]" />
+        <img src={src} alt={alt} className="relative h-full w-full object-contain object-bottom drop-shadow-[0_18px_30px_rgba(15,45,82,.25)]" />
       </>}
     </div>{children}</div>
 }

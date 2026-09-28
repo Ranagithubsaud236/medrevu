@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { Briefcase, Stethoscope, ArrowRight, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, ChevronDown, Menu, X, ArrowUp, MapPin, Calculator, Rocket } from 'lucide-react'
+import { Briefcase, Stethoscope, ArrowRight, Phone, Mail, Linkedin, ChevronDown, Menu, X, ArrowUp, MapPin, Calculator, Rocket } from 'lucide-react'
 import { brand, services, specialties } from '../data.js'
 import { Logo, DuoIcon } from './brand.jsx'
 
 export function TopBar() {
   return <div className="hidden bg-navy text-sm text-white md:block"><div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-2">
     <div className="flex gap-6"><a className="flex items-center gap-2 hover:text-gold" href={`tel:${brand.phone}`}><Phone size={14} />{brand.phone}</a><a className="flex items-center gap-2 hover:text-gold" href={`mailto:${brand.email}`}><Mail size={14} />{brand.email}</a></div>
-    <div className="flex items-center gap-4">{[Facebook, Twitter, Linkedin, Instagram].map((I, i) => <a key={i} href="#" className="transition hover:-translate-y-0.5 hover:text-gold"><I size={15} /></a>)}
+    <div className="flex items-center gap-4"><a href={brand.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${brand.name} on LinkedIn`} className="transition hover:-translate-y-0.5 hover:text-gold"><Linkedin size={15} /></a>
       <Link to="/contact" className="ml-2 flex items-center gap-2 rounded-full bg-gold px-4 py-1 font-semibold text-navy transition hover:bg-gold2">Get a Quote <Rocket size={14} /></Link></div></div></div>
 }
 const Mega = ({ items, base, all, icon: HI, cols }) => (
@@ -28,7 +28,7 @@ export function Navbar() {
   return (
     <header className={`relative bg-white/95 backdrop-blur transition-all ${scrolled ? 'shadow-md' : ''}`}>
       <div className={`mx-auto flex max-w-6xl items-center justify-between px-5 transition-all ${scrolled ? 'h-16' : 'h-20'}`}>
-        <Link to="/" aria-label="MedRevu home"><Logo /></Link>
+        <Link to="/" aria-label="United MD Solutions home"><Logo /></Link>
         <nav className="hidden items-center gap-7 self-stretch text-[15px] lg:flex">
           <NavLink to="/" end className={link}>Home</NavLink>
           <div className="group flex h-full items-center"><NavLink to="/services" className={() => sect('/services')}>Services <ChevronDown size={14} className="transition group-hover:rotate-180" /></NavLink><Mega items={services} base="/services" all="View all Services" icon={Briefcase} cols="grid-cols-7" /></div>
@@ -64,7 +64,7 @@ export function Popup() {
 }
 function F({ l, v, set, min, max, step, suf }) {
   const fmt = n => '$' + Math.round(n).toLocaleString()
-  return <label className="mb-4 block text-sm font-semibold">{l}: <span className="text-navy2">{suf === '$' ? fmt(v) : v + suf}</span><input type="range" min={min} max={max} step={step} value={v} onChange={e => set(+e.target.value)} className="mt-2 w-full accent-[#c9a24b]" /></label>
+  return <label className="mb-4 block text-sm font-semibold">{l}: <span className="text-navy2">{suf === '$' ? fmt(v) : v + suf}</span><input type="range" min={min} max={max} step={step} value={v} onChange={e => set(+e.target.value)} className="mt-2 w-full accent-[#0fa79b]" /></label>
 }
 function Calc({ onClose }) {
   const [c, setC] = useState(80000), [cost, setCost] = useState(8), [den, setDen] = useState(12)

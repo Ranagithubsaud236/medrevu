@@ -1,18 +1,11 @@
 import { Leaf, Anchor, Mountain, Crown, TreePine, Cross, Microscope } from 'lucide-react'
 
-// Hexagon mark with a pulse line that rises into an "M", plus the wordmark.
+// United MD Solutions round mark plus the wordmark.
 export function Logo({ light = false, className = '' }) {
   return <span className={`flex items-center gap-2.5 ${className}`}>
-    <svg viewBox="0 0 48 48" className="h-11 w-11 shrink-0" aria-hidden="true">
-      <defs><linearGradient id="lg-hex" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#16406b" /><stop offset="1" stopColor="#0b1d36" /></linearGradient>
-        <linearGradient id="lg-gold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#e8d3a0" /><stop offset=".5" stopColor="#c9a24b" /><stop offset="1" stopColor="#e8d3a0" /></linearGradient></defs>
-      <path d="M24 2.5 42.6 13.25v21.5L24 45.5 5.4 34.75v-21.5z" fill="url(#lg-hex)" />
-      <path d="M24 6.2 39.4 15.1v17.8L24 41.8 8.6 32.9V15.1z" fill="none" stroke="url(#lg-gold)" strokeWidth="1" opacity=".7" />
-      <path d="M9 26h6l3-9 5 15 4-19 4 13h8" fill="none" stroke="url(#lg-gold)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="39" cy="26" r="1.9" fill="#e8d3a0" />
-    </svg>
-    <span className="leading-none"><span className={`block font-serif text-[26px] font-semibold tracking-tight ${light ? 'text-white' : 'text-navy'}`}>Medi<span className="gold-text font-light italic">Revu</span></span>
-      <span className={`mt-1 block text-[9px] font-bold uppercase tracking-[.32em] ${light ? 'text-white/60' : 'text-slate-400'}`}>Revenue · Care · Clarity</span></span>
+    <img src="/images/umd-logo.jpg" alt="" className="h-12 w-12 shrink-0 rounded-full bg-white object-contain" />
+    <span className="leading-none"><span className={`block text-[22px] font-bold tracking-tight ${light ? 'text-white' : 'text-[#0f2d52]'}`}>United <span className="text-[#0fa79b]">MD</span></span>
+      <span className={`mt-1 block text-[10px] font-semibold uppercase tracking-[.35em] ${light ? 'text-white/70' : 'text-[#0f2d52]'}`}>Solutions</span></span>
   </span>
 }
 

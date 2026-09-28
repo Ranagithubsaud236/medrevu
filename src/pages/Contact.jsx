@@ -21,5 +21,5 @@ export default function Contact() {
           {sel('specialty', 'Specialty', specialties.map(s => s.title))}{sel('collection', 'Monthly collection', ['Under $50k', '$50k – $150k', '$150k – $400k', '$400k+'])}
           <button className="rounded-full bg-navy px-8 py-3 font-semibold text-white transition hover:bg-navy2 hover:shadow-lg">Send request</button></form>}</div></div></section>
     <section className="mx-auto grid max-w-4xl gap-6 px-5 py-16 md:grid-cols-3">{[[Mail, 'Mail here', brand.email], [MapPin, 'Visit here', brand.address], [Phone, 'Call here', brand.phone]].map(([I, t, d], k) => <Reveal key={t} d={k * 100}><Card className="text-center"><span className="mx-auto mb-3 grid h-14 w-14 place-items-center rounded-full bg-navy text-gold2"><I /></span><h3 className="text-lg">{t}</h3><p className="text-sm text-slate-600">{d}</p></Card></Reveal>)}</section>
-    <iframe title="Map" className="h-80 w-full border-0" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-96.82%2C32.76%2C-96.77%2C32.80&layer=mapnik" /></>
+    <iframe title="Map" className="h-80 w-full border-0" loading="lazy" src={`https://maps.google.com/maps?q=${encodeURIComponent(brand.address)}&z=15&output=embed`} /></>
 }

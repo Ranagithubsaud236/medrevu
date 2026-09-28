@@ -10,7 +10,7 @@ const how = [['Apply', UserCheck, 'Complete the short partner form.'], ['Get app
 export default function Partner() {
   const [open, setOpen] = useState(0)
   return <><PageHeader title="Partner program" sub="Help providers grow. Earn while they succeed." crumbs={['Partner']} />
-    <section className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 md:grid-cols-2"><Reveal><p className="font-semibold text-gold">MedRevu Partner Program</p><h2 className="mt-2 text-4xl leading-tight">Refer practices. <span className="text-navy2">Earn recurring income.</span></h2>
+    <section className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 md:grid-cols-2"><Reveal><p className="font-semibold text-gold">United MD Solutions Partner Program</p><h2 className="mt-2 text-4xl leading-tight">Refer practices. <span className="text-navy2">Earn recurring income.</span></h2>
       <p className="mt-4 text-lg text-slate-600">Introduce healthcare providers to certified billing experts. We handle onboarding, billing and collections while you earn a bonus and a monthly commission for every active client.</p>
       <div className="mt-7 flex flex-wrap gap-4"><Btn to="/contact">Apply now</Btn><Btn light to="/contact" icon={Handshake}>Talk to our team</Btn></div></Reveal>
       <Reveal d={150}><Photo src={photos.nurse} blob={false} className="mx-auto aspect-[1295/1208] w-full max-w-lg" alt="Healthcare professional holding a clipboard" /></Reveal></section>

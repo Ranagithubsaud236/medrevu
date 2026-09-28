@@ -29,13 +29,13 @@ function Certified() {
 
 const statIcons = [CalendarClock, TrendingUp, Target, Wallet, ClipboardCheck]
 const statList = [['< 30', 'Days in AR'], ['10-15%', 'Revenue Increase'], ['97%', 'First Pass Ratio'], ['96%', 'Collection Ratio'], ['98%', 'Clean Claim Rate']]
-const Stat = ({ v, l, I, d }) => <Reveal d={d}><div className="relative h-36 w-36 rounded-xl bg-white p-3 shadow-[0_10px_30px_rgba(11,29,54,.18)] ring-1 ring-slate-100 transition duration-300 hover:-translate-y-2 md:h-[150px] md:w-[150px]">
+const Stat = ({ v, l, I, d }) => <Reveal d={d}><div className="relative h-36 w-36 rounded-xl bg-white p-3 shadow-[0_10px_30px_rgba(15,45,82,.18)] ring-1 ring-slate-100 transition duration-300 hover:-translate-y-2 md:h-[150px] md:w-[150px]">
   <span className="absolute right-3 top-3 grid h-7 w-7 place-items-center rounded-md bg-gold text-white"><I size={16} /></span>
   <div className="absolute bottom-4 left-4"><div className="text-3xl text-slate-700">{v}</div><p className="mt-0.5 text-[11px] font-bold text-slate-600">{l}</p></div></div></Reveal>
 function Different() {
   return <section className="mx-auto max-w-4xl px-5 py-10 md:py-24"><div className="grid-bg rounded-3xl bg-navy2 px-5 py-8 md:px-10 md:py-0">
     <div className="flex flex-wrap justify-center gap-5 md:-translate-y-1/3 md:justify-between md:px-8">{statList.slice(0, 3).map(([v, l], k) => <Stat key={l} v={v} l={l} I={statIcons[k]} d={k * 100} />)}</div>
-    <h2 className="my-8 text-center text-2xl font-normal leading-snug text-white md:-my-2 md:text-[28px]">What Makes <b className="font-bold">MedRevu</b><br />Different from Others!</h2>
+    <h2 className="my-8 text-center text-2xl font-normal leading-snug text-white md:-my-2 md:text-[28px]">What Makes <b className="font-bold">United MD Solutions</b><br />Different from Others!</h2>
     <div className="flex flex-wrap justify-center gap-5 md:translate-y-1/3 md:gap-12">{statList.slice(3).map(([v, l], k) => <Stat key={l} v={v} l={l} I={statIcons[k + 3]} d={(k + 3) * 100} />)}</div></div></section>
 }
 
@@ -48,7 +48,7 @@ const tabData = [
 function Tabs() {
   const [i, setI] = useState(0), [k, text, feats] = tabData[i], t = services[k]
   return <section className="mx-auto max-w-4xl px-5 py-16">
-    <div className="flex flex-wrap justify-around rounded-md bg-white shadow-[0_4px_20px_rgba(11,29,54,.08)] ring-1 ring-slate-100">{tabData.map(([n], j) =>
+    <div className="flex flex-wrap justify-around rounded-md bg-white shadow-[0_4px_20px_rgba(15,45,82,.08)] ring-1 ring-slate-100">{tabData.map(([n], j) =>
       <button key={n} onClick={() => setI(j)} className={`relative px-4 py-3.5 text-[13px] font-bold transition after:absolute after:inset-x-3 after:bottom-1.5 after:h-0.5 after:bg-navy2 after:transition-transform ${j === i ? 'text-navy after:scale-x-100' : 'text-slate-600 after:scale-x-0 hover:text-navy2'}`}>{services[n].title}</button>)}</div>
     <div key={i} className="page mt-6 grid items-center gap-8 md:grid-cols-2">
       <div><span className="grid h-12 w-12 place-items-center rounded-lg bg-gold text-white"><t.icon size={26} /></span>
@@ -62,11 +62,11 @@ function Tabs() {
 
 function Story() {
   return <section className="mx-auto max-w-[62rem] px-5"><Reveal><div className="grid-bg rounded-3xl bg-navy2 px-8 py-10 text-center text-white md:px-24">
-    <h2 className="text-3xl font-normal leading-tight text-white">Short Story<br />About <b className="font-bold">MedRevu</b></h2>
-    <p className="mx-auto mt-6 max-w-2xl text-[16px] font-semibold leading-snug text-white">MedRevu is a trusted partner for medical billing. Leveraging our deep expertise in healthcare IT and billing, we provide fast and efficient solutions tailored to the unique needs of each practice. Our end-to-end services include medical claims processing, aging AR recovery, and practice management solutions for accelerated revenue growth.</p></div></Reveal></section>
+    <h2 className="text-3xl font-normal leading-tight text-white">Short Story<br />About <b className="font-bold">United MD Solutions</b></h2>
+    <p className="mx-auto mt-6 max-w-2xl text-[16px] font-semibold leading-snug text-white">United MD Solutions is a trusted partner for medical billing. Leveraging our deep expertise in healthcare IT and billing, we provide fast and efficient solutions tailored to the unique needs of each practice. Our end-to-end services include medical claims processing, aging AR recovery, and practice management solutions for accelerated revenue growth.</p></div></Reveal></section>
 }
 
-const Chip = ({ s: { slug, title, icon: I }, k }) => <Link to={`/specialties/${slug}`} className={`flex w-fit items-center gap-2 rounded-md bg-white p-1.5 pr-3 text-[13px] font-semibold text-slate-700 shadow-[0_4px_16px_rgba(11,29,54,.12)] ring-1 ring-slate-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl ${k % 2 ? 'md:translate-y-1/2' : ''}`}>
+const Chip = ({ s: { slug, title, icon: I }, k }) => <Link to={`/specialties/${slug}`} className={`flex w-fit items-center gap-2 rounded-md bg-white p-1.5 pr-3 text-[13px] font-semibold text-slate-700 shadow-[0_4px_16px_rgba(15,45,82,.12)] ring-1 ring-slate-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl ${k % 2 ? 'md:translate-y-1/2' : ''}`}>
   <span className={`grid h-7 w-7 place-items-center rounded ${k % 3 === 1 ? 'bg-navy2' : 'bg-gold'} text-white`}><I size={16} /></span>{title}</Link>
 function Specialties() {
   const bySlug = x => specialties.find(s => s.slug === x)
@@ -74,7 +74,7 @@ function Specialties() {
   const side = list => <div className="grid grid-cols-2 gap-x-4 gap-y-6 md:gap-y-8">{list.map((s, k) => <Chip key={s.slug} s={s} k={k} />)}</div>
   return <section className="mx-auto max-w-5xl px-5 py-24"><div className="grid items-center gap-10 md:grid-cols-[1fr_auto_1fr]">
     {side(left)}
-    <Reveal className="order-first text-center md:order-none"><h2 className="text-2xl font-normal leading-tight text-slate-700">MedRevu<b className="block font-bold text-navy2">Specialties</b></h2>
+    <Reveal className="order-first text-center md:order-none"><h2 className="text-2xl font-normal leading-tight text-slate-700">United MD Solutions<b className="block font-bold text-navy2">Specialties</b></h2>
       <p className="mx-auto mt-5 max-w-56 text-[12px] leading-relaxed text-slate-700">We cater to the unique coding and reimbursement requirements of all specialties.</p>
       <div className="mt-5"><Btn to="/specialties">View All Specialties</Btn></div></Reveal>
     {side(right)}</div></section>
