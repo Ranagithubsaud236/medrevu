@@ -1,5 +1,5 @@
 import { Hand, Settings, FilePlus2, CircleDollarSign, ClipboardList, Search, FileCode2, CircleCheck, FileText, Award, Timer, RotateCcw, ChartColumnIncreasing, Syringe, Wind, HeartPulse, Activity, Pill, Plus, Brain, Zap, Baby, Heart, Dna, ShieldPlus, ScanLine, Radiation, Bone, Sparkles, Droplets, FlaskConical, Eye, Glasses, Stethoscope, Droplet } from 'lucide-react'
-export const brand = { name: 'United MD Solutions', phone: '(555) 010-0142', email: 'hello@umd.com', address: '9305 Sunset Valley Road, San Antonio, TX 78230, USA', linkedin: 'https://www.linkedin.com/' }
+export const brand = { name: 'United MD Solutions', phone: '(555) 010-0142', email: 'info@unitedmdsolutions.com', address: '9305 Sunset Valley Road, San Antonio, TX 78230, USA', linkedin: 'https://www.linkedin.com/' }
 const s = (slug, title, [icon, accent], short) => ({ slug, title, icon, accent, short })
 export const services = [
   s('denial-management', 'Denial Management', [Hand, Settings], 'Find the root cause of rejections, appeal fast, and stop repeat denials.'),
